@@ -29,7 +29,7 @@ public class ClientTest {
     private static Employee getEmployee(){
         Employee employee= new Employee();
         employee.setEmployeeName("Barry Bingel");
-        employee.setEmail("birry.cs2017@gmail.com");
+        employee.setEmail("barry.cs2017@gmail.com");
         employee.setSalary(50000.00);
         employee.setDoj(new Date());
         return employee;
