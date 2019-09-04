@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a61e0131-8c56-4da4-a0c7-e79594773b6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4a659e41-f32e-4e43-bddb-ac6a8130d9fb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4a659e41-f32e-4e43-bddb-ac6a8130d9fb.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HibernateSessionFactoryCreation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HibernateSessionFactoryCreation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/infotech/client/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/infotech/client/ClientTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/infotech/entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/infotech/entities/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/HibernateSessionFactoryCreation.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/infotech/client/ClientTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/infotech/client/ClientTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/infotech/entities/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/infotech/entities/Employee.class" afterDir="false" />
     </list>
@@ -135,7 +130,8 @@
       <workItem from="1567575245459" duration="946000" />
       <workItem from="1567577327252" duration="3435000" />
       <workItem from="1567596975614" duration="4315000" />
-      <workItem from="1567605118766" duration="444000" />
+      <workItem from="1567605118766" duration="1121000" />
+      <workItem from="1567616181425" duration="2410000" />
     </task>
     <servers />
   </component>
