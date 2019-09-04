@@ -1,6 +1,6 @@
-package com.izdebski.service;
+package com.infotech.service;
 
-import com.izdebski.entities.Employee;
+import com.infotech.entities.Employee;
 
 public interface EmployeeService {
 

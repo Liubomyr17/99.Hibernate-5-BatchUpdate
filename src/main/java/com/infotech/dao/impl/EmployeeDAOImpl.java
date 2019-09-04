@@ -1,8 +1,8 @@
-package com.izdebski.dao.impl;
+package com.infotech.dao.impl;
 
-import com.izdebski.dao.EmloyeeDAO;
-import com.izdebski.entities.Employee;
-import com.izdebski.util.HibernateUtil;
+import com.infotech.dao.EmloyeeDAO;
+import com.infotech.entities.Employee;
+import com.infotech.util.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 

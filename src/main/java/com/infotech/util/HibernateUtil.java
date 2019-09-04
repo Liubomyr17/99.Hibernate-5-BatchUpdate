@@ -1,4 +1,4 @@
-package com.izdebski.util;
+package com.infotech.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;

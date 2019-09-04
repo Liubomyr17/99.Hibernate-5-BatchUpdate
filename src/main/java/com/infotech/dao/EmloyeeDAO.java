@@ -1,6 +1,6 @@
-package com.izdebski.dao;
+package com.infotech.dao;
 
-import com.izdebski.entities.Employee;
+import com.infotech.entities.Employee;
 
 public interface EmloyeeDAO {
 

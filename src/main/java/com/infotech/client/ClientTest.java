@@ -1,11 +1,8 @@
-package com.izdebski.client;
+package com.infotech.client;
 
-import com.izdebski.entities.Employee;
-import com.izdebski.service.EmployeeService;
-import com.izdebski.service.impl.EmployeeServiceImpl;
-import com.izdebski.util.HibernateUtil;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
+import com.infotech.entities.Employee;
+import com.infotech.service.EmployeeService;
+import com.infotech.service.impl.EmployeeServiceImpl;
 
 import java.util.Date;
 
@@ -14,21 +11,21 @@ public class ClientTest {
     public static void main(String[] args) {
         EmployeeService employeeService = new EmployeeServiceImpl();
 //            createEmployee(employeeService);
-            getEmployeeById(employeeService);
-//            updateEmployeeById(employeeService);
-            //deleteEmployeeById(employeeService);
+             getEmployeeById(employeeService);
+//          updateEmployeeById(employeeService);
+//            deleteEmployeeById(employeeService);
         }
 
     private static void deleteEmployeeById(EmployeeService employeeService) {
-        employeeService.deleteEmployeeById(1);
+        employeeService.deleteEmployeeById(2);
     }
 
     private static void updateEmployeeById(EmployeeService employeeService) {
-        employeeService.updateEmployeeById(2, 70000.00);
+        employeeService.updateEmployeeById(2, 77000.00);
     }
 
     private static void getEmployeeById(EmployeeService employeeService) {
-        Employee employee = employeeService.getEmployeeById(2);
+        Employee employee = employeeService.getEmployeeById(1);
         System.out.println(employee);
     }
 

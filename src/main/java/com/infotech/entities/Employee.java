@@ -1,4 +1,4 @@
-package com.izdebski.entities;
+package com.infotech.entities;
 
 import org.hibernate.annotations.DynamicUpdate;
 

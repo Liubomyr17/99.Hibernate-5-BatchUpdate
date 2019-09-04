@@ -1,8 +1,8 @@
-package com.izdebski.service.impl;
+package com.infotech.service.impl;
 
-import com.izdebski.dao.impl.EmployeeDAOImpl;
-import com.izdebski.entities.Employee;
-import com.izdebski.service.EmployeeService;
+import com.infotech.dao.impl.EmployeeDAOImpl;
+import com.infotech.entities.Employee;
+import com.infotech.service.EmployeeService;
 
 public class EmployeeServiceImpl implements EmployeeService {
 
