@@ -1,10 +1,15 @@
-package com.infotech.model;
+package com.infotech.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
+import javax.persistence.*;
 
-@Embeddable
+@Entity
+@Table(name="address_table")
 public class Address {
+
+    @Id
+    @Column(name="adress_id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Integer addressId;
 
     @Column(name = "street_name",length=50)
     private String street;
@@ -38,5 +43,9 @@ public class Address {
     }
     public void setPincode(Long pincode) {
         this.pincode = pincode;
+    }
+    @Override
+    public String toString() {
+        return "Address [street=" + street + ", city=" + city + ", state=" + state + ", pincode=" + pincode + "]";
     }
 }

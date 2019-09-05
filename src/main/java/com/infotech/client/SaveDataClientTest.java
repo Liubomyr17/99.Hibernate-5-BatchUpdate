@@ -1,17 +1,17 @@
 package com.infotech.client;
 
 import com.infotech.entities.Employee;
-import com.infotech.model.Address;
+import com.infotech.entities.Address;
 import com.infotech.util.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
 import java.util.Date;
 
-public class ClientTest {
+public class SaveDataClientTest {
 
     public static void main(String[] args) {
-        try( Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try(Session session = HibernateUtil.getSessionFactory().openSession()) {
 
             createEmployee(session);
         } catch (HibernateException e) {
@@ -34,20 +34,13 @@ public class ClientTest {
         employee.setSalary(50000.00);
         employee.setDoj(new Date());
 
-        Address homeAddress = new Address ();
-        homeAddress.setCity ("Chennai");
-        homeAddress.setPincode (90123L);
-        homeAddress.setState ("IL");
-        homeAddress.setStreet ("Park St.");
+        Address address1 = new Address();
+        address1.setCity("Chennai");
+        address1.setPincode(9087727L);
+        address1.setState("Tamilnadu");
+        address1.setStreet("Park Street");
 
-        Address officeAddress = new Address ();
-        officeAddress.setCity ("Puno");
-        officeAddress.setPincode (100123L);
-        officeAddress.setState ("MH");
-        officeAddress.setStreet ("XYZ Street");
-
-        employee.setHomeAddress (homeAddress);
-        employee.setOfficeAddress (officeAddress);
+        employee.setAddress(address1);
 
         return employee;
     }
