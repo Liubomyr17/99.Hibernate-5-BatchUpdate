@@ -1,6 +1,7 @@
 package com.infotech.client;
 
 import com.infotech.entities.Employee;
+import com.infotech.model.Address;
 import com.infotech.util.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -32,6 +33,22 @@ public class ClientTest {
         employee.setEmail("barry.cs2017@gmail.com");
         employee.setSalary(50000.00);
         employee.setDoj(new Date());
+
+        Address homeAddress = new Address ();
+        homeAddress.setCity ("Chennai");
+        homeAddress.setPincode (90123L);
+        homeAddress.setState ("IL");
+        homeAddress.setStreet ("Park St.");
+
+        Address officeAddress = new Address ();
+        officeAddress.setCity ("Puno");
+        officeAddress.setPincode (100123L);
+        officeAddress.setState ("MH");
+        officeAddress.setStreet ("XYZ Street");
+
+        employee.setHomeAddress (homeAddress);
+        employee.setOfficeAddress (officeAddress);
+
         return employee;
     }
 }

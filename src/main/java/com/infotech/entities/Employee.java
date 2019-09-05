@@ -1,5 +1,6 @@
 package com.infotech.entities;
 
+import com.infotech.model.Address;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
@@ -12,8 +13,7 @@ public class Employee {
 
     @Id
     @Column(name="employee_id")
-    @GeneratedValue(strategy=GenerationType.TABLE, generator = "empid_generator")
-    @TableGenerator (name = "empid_generator", initialValue = 1, allocationSize = 1, table = "empid_seq")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer employeeId;
 
     @Column(name="employee_name",length=200,nullable=false)
@@ -21,6 +21,24 @@ public class Employee {
 
     @Column(name="email")
     private String email;
+
+    @Embedded
+    @AttributeOverrides (value = {
+            @AttributeOverride (column = @Column(name = "home_street_name", length = 50), name = "street"),
+            @AttributeOverride (column = @Column(name = "home_city_name"), name = "city"),
+            @AttributeOverride (column = @Column(name = "home_state_name"), name = "state"),
+            @AttributeOverride (column = @Column(name = "home_pin_code"), name = "pincode")
+    })
+    private Address homeAddress;
+
+    @Embedded
+    @AttributeOverrides (value = {
+            @AttributeOverride (column = @Column(name = "office_street_name", length = 60), name = "street"),
+            @AttributeOverride (column = @Column(name = "office_city_name"), name = "city"),
+            @AttributeOverride (column = @Column(name = "office_state_name"), name = "state"),
+            @AttributeOverride (column = @Column(name = "office_pin_code"), name = "pincode")
+    })
+    private Address officeAddress;
 
     @Column(name="date_of_joining")
     private Date doj;
@@ -68,12 +86,30 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Address getHomeAddress() {
+        return homeAddress;
+    }
+
+    public void setHomeAddress(Address homeAddress) {
+        this.homeAddress = homeAddress;
+    }
+
+    public Address getOfficeAddress() {
+        return officeAddress;
+    }
+
+    public void setOfficeAddress(Address officeAddress) {
+        this.officeAddress = officeAddress;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
                 "employeeId=" + employeeId +
                 ", employeeName='" + employeeName + '\'' +
                 ", email='" + email + '\'' +
+                ", homeAddress=" + homeAddress +
+                ", officeAddress=" + officeAddress +
                 ", doj=" + doj +
                 ", salary=" + salary +
                 '}';
