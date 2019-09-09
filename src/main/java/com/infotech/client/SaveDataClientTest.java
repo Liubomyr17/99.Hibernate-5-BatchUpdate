@@ -33,6 +33,10 @@ public class SaveDataClientTest {
 
             employee.getAddressList().add(address1);
             employee.getAddressList().add(address2);
+
+            address1.setEmployee(employee);
+            address2.setEmployee(employee);
+
             session.persist(employee);
 
             session.getTransaction().commit();

@@ -20,7 +20,9 @@ public class Address {
     @Column(name = "pin_code")
     private Long pincode;
 
-
+    @ManyToOne
+    @JoinColumn(name="employee_id")
+    private Employee employee;
 
     public String getStreet() {
         return street;
@@ -47,22 +49,15 @@ public class Address {
         this.pincode = pincode;
     }
 
-    public Integer getAddressId() {
-        return addressId;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
-    public void setAddressId(Integer addressId) {
-        this.addressId = addressId;
+    public Employee getEmployee() {
+        return employee;
     }
-
     @Override
     public String toString() {
-        return "Address{" +
-                "addressId=" + addressId +
-                ", street='" + street + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", pincode=" + pincode +
-                '}';
+        return "Address [street=" + street + ", city=" + city + ", state=" + state + ", pincode=" + pincode + "]";
     }
 }
